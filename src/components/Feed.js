@@ -18,17 +18,25 @@ const Feed = () => {
 
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
+
+    {/* Leftside Box */}
       <Box
         sx={{
           borderRight: "1px solid #3d3d3d",
           height: { sx: "auto", md: "92vh" },
           px: { sx: 0, md: 2 },
         }}>
+
+      {/* Sidebar with categories */}
         <Sidebar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+
+      {/* Copyright text down below the Sidebar */}
         <Typography className="copyright" sx={{ color: "#ffffff", mt: "1.5" }}>
           @copyright 2024 Youtube Clone
         </Typography>
       </Box>
+
+    {/* Right Side Box */}
       <Box p={2} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
         <Typography
           variant="h4"
@@ -37,6 +45,8 @@ const Feed = () => {
           mb={2}>
           {selectedCategory} <span style={{ color: "#fc1503" }}>Video</span>
         </Typography>
+
+      {/* Videos  */}
         <Videos videos={videos} />
       </Box>
     </Stack>
