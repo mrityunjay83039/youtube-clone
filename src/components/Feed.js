@@ -47,7 +47,7 @@ const Feed = () => {
         </Typography>
 
       {/* Videos  */}
-        <Videos videos={videos} />
+        <Videos videos={videos} direction="row" videoWidth="32%" />
       </Box>
     </Stack>
   );
