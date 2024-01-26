@@ -37,7 +37,7 @@ function ChannelDetail() {
       </Box>
       <Box p={2} display="flex">
         
-        <Videos videos={videos} />
+        <Videos videos={videos} videoWidth="32%" direction="row" />
       </Box>
     </Box>
   );
