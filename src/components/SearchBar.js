@@ -28,6 +28,7 @@ const SearchBar = () => {
         pl: 2,
         boxShadow: "none",
         mr: { sm: 5 },
+        display:{xs:'flex'}
       }}>
       <input
         type="text"
