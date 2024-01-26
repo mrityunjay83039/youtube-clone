@@ -8,7 +8,9 @@ const Feed = () => {
 
   const[selectedCategory, setSelectedCategory] = useState('New');
   const [videos, setVideos] = useState([]);
-
+  if(selectedCategory==='Mrityunjay Mishra'){
+    setSelectedCategory(`How to setup Google Cloud FTP with FileZilla Mrityunjay Mishra`)
+  }
   useEffect(()=>{
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data)=>{
       setVideos(data.items);

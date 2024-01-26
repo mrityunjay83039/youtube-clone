@@ -3,6 +3,8 @@ import { Link, useParams } from "react-router-dom";
 import ReactPlayer from "react-player";
 import { Typography, Box, Stack } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
+import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 
 import { Videos } from "./";
 import { fetchFromAPI } from "../utils/fethFromAPI";
@@ -61,11 +63,14 @@ const VideoDetail = () => {
                 </Typography>
               </Link>
               <Stack direction="row" gap="20px" alignItems="center">
-                <Typography variant="body1" sx={{ opacity: 0.7 }}>
-                  {parseInt(viewCount).toLocaleString()} views
+                <Typography flexDirection="row" alignItems="center" gap={2} display="flex" variant="body1" sx={{ opacity: 0.7 }}>
+                  <span><VisibilityOutlinedIcon/> </span>
+                  <span> {parseInt(viewCount).toLocaleString()} </span>
                 </Typography>
-                <Typography variant="body1" sx={{ opacity: 0.7 }}>
-                  {parseInt(likeCount).toLocaleString()} likes
+                <Typography flexDirection="row" alignItems="center" gap={2} display="flex" variant="body1" sx={{ opacity: 0.7 }}>
+                  <span><ThumbUpOutlinedIcon/></span>
+                  <span> {parseInt(likeCount).toLocaleString()} </span>
+                  
                 </Typography>
               </Stack>
             </Stack>
