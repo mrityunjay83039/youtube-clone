@@ -34,7 +34,7 @@ const Feed = () => {
 
       {/* Copyright text down below the Sidebar */}
         <Typography className="copyright" sx={{ color: "#ffffff", mt: "1.5" }}>
-          @copyright 2024 Youtube Clone
+          @copyright 2024 QTube <br/> By: Mrityunjay Mishra
         </Typography>
       </Box>
 
